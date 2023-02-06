@@ -42,7 +42,8 @@ module.exports = defineConfig({
     supportFile:'cypress/support/e2e.js',
     setupNodeEvents,
     chromeWebSecurity: false,
-    watchForFileChanges: false
+    watchForFileChanges: false,
+    experimentalRunAllSpecs: true
   },
 });
 
