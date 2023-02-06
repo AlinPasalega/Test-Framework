@@ -1,0 +1,25 @@
+{
+  "name": "cypress-js",
+  "version": "1.0.0",
+  "description": "cypressBDD project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cypress",
+    "javascript",
+    "cucumber"
+  ],
+  "author": "Alin",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.2",
+    "@cypress/webpack-preprocessor": "^5.16.1",
+    "cypress": "^12.5.1",
+    "cypress-fill-command": "^1.0.2"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.2"
+  }
+}
