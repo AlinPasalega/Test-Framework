@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 const webpack = require("@cypress/webpack-preprocessor");
 const preprocessor = require("@badeball/cypress-cucumber-preprocessor");
+const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 
 async function setupNodeEvents(on, config) {
   // This is required for the preprocessor to be able to generate JSON reports after each run, and more,
@@ -29,6 +30,7 @@ async function setupNodeEvents(on, config) {
       },
     })
   );
+  allureWriter(on, config);
   return config;
 }
 
@@ -43,7 +45,10 @@ module.exports = defineConfig({
     setupNodeEvents,
     chromeWebSecurity: false,
     watchForFileChanges: false,
-    experimentalRunAllSpecs: true
+    experimentalRunAllSpecs: true,
+    allureReuseAfterSpec: true
+    
+    
   },
 });
 
