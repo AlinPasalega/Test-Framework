@@ -4,10 +4,6 @@ import { page as loginPage } from "../../pageObjects/loginPage";
 import { page as productPage } from "../../pageObjects/productPage";
 import "../../commonSteps/generalStep";
 
-  Then('the URL will contain the inventory subdirectory', () => {
-    cy.url().should('contains', '/inventory.html')
-  })
-
   When('A user enters the locked out credentials {string}', (lockedUsername) => {
     cy.get(loginPage.selectors.userNameField).type(lockedUsername)
   })

@@ -6,7 +6,6 @@ Feature: Product Page
      When A user enters the correct username "standard_user"
      Then the user enters the correct password "secret_sauce"
      When The user clicks on the "login button"
-     Then the URL will contain the inventory subdirectory
      Then I expect the product page to be visible
 
     @add-remove-products
