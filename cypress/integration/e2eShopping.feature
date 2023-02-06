@@ -1,6 +1,7 @@
 @e2e-shopping
 Feature: End-To-End Shopping
 
+    @e2e
     Scenario: Shopping E2E
      Given I open the application
      When A user enters the correct username "standard_user"
@@ -34,6 +35,7 @@ Feature: End-To-End Shopping
      And I expect the product page to be visible
      And I expect the 'shoppingCartBadge' to not exist
 
+    @e2e-w/o-firstName
     Scenario: Checkout withouth setting a first name
      Given I open the application
      When A user enters the correct username "standard_user"
@@ -56,6 +58,7 @@ Feature: End-To-End Shopping
      Then I expect the 'errorMessage' to be visible
      And I expect the 'errorText' to contain the text 'Error: First Name is required'
 
+    @e2e-w/o-LastName
     Scenario: Checkout withouth setting a last name
      Given I open the application
      When A user enters the correct username "standard_user"
@@ -78,6 +81,7 @@ Feature: End-To-End Shopping
      Then I expect the 'errorMessage' to be visible
      And I expect the 'errorText' to contain the text 'Error: Last Name is required'
 
+    @e2e-w/o-postalCode
     Scenario: Checkout withouth setting a postal code
      Given I open the application
      When A user enters the correct username "standard_user"
